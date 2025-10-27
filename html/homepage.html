@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libra – Trang chủ</title>
-
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
 <script src="/js/script.js"></script>
-
 </head>
-
 <body>
-
     <div class="bg-shape" aria-hidden="true"></div>
-
     <header class="navbar">
         <div class="logo-box">
             <img src="/images/Libralogo.png" class="logo" alt="Logo Libra">
@@ -32,25 +24,29 @@
             <a href="#">Trang chủ</a>
             <a href="#">Mua sách</a>
             <a href="#">Hướng dẫn</a>
-            <a href="#">Đấu giá</a>
+            <a href="#">Đấu giá </a>
             <a href="#">Bán sách</a>
             <a href="#">Tin tức</a>
+            <a href="#">Liên hệ</a>
+
         </nav>
         <div class="nav-actions">
-            <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm...">
-                <button>🔍</button>
-            </div>
-        
-            <div class="cart-icon">
-                <a href="/cart.html" title="Giỏ hàng">
-                    🛒
-                    <span class="cart-count">2</span>
-                </a>
-            </div>
+            <!-- Search Icon -->
+            <a href="#" class="icon-btn" title="Tìm kiếm">
+              <i class="fas fa-search"></i>
+            </a>
+            <!-- User Icon -->
+            <a href="/login.html" class="icon-btn" title="Đăng nhập">
+              <i class="fas fa-user"></i>
+            </a>
+            <!-- Cart Icon -->
+            <a href="/cart.html" class="icon-btn cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">2</span>
+            </a>
+          </div>
         </div>        
     </header>
-
     <div class="index" id="index">
         <a href="#news-column"><span class="dot"></span> Giới thiệu</a>
         <a href="#special-seller"><span class="dot"></span> Ý nghĩa</a>
@@ -58,99 +54,77 @@
         <a href="#libra-moments"><span class="dot"></span> Nổi bật</a>
         <a href="#bestseller-2col"><span class="dot"></span> Sản phẩm</a>
         <a href="#why-libra"><span class="dot"></span> Chúng tôi</a>
-
     </div>
     <section id="hero" class="hero">
         <h1>LIBRA – THƯ VIỆN SÁCH CŨ</h1>
         <p>Những cuốn sách cũ kể lại câu chuyện mới mỗi ngày</p>
     </section>
-
     <main class="content">
         <!-- ===== LEFT BANNER ===== -->
         <div class="banner-box">
             <div class="slider">
                 <div class="slide active">
-                    <img src="/images/dau_gia.png " alt="Đấu giá Libra">
+                    <img src="/images/newbannerdaugiaa.png" alt="Đấu giá Libra">
                     <div class="caption">
                         <h3>Đấu giá sách Libra</h3>
                         <p>Tham gia phiên đấu giá sách diễn ra hàng tuần.</p>
                     </div>
                 </div>
-
                 <div class="slide">
-                    <img src="/images/banner4.png" alt="Tác phẩm nổi bật">
+                    <img src="/images/newbanner1.jpg" alt="Sách việt xưa">
                     <div class="caption">
-                        <h3>Tác phẩm nổi bật: “Đi tìm thời gian đã mất”</h3>
-                        <p>Bộ tiểu thuyết kinh điển vừa được tái bản trong tháng này.</p>
+                        <h3>Hành trình bảo tồn bìa sách Việt xưa</h3>
+                        <p>Libra trưng bày bìa sách in từ 1940s-1970s — không chỉ là sách, mà là tác phẩm nghệ thuật.</p>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <img src="/images/banner3.png" alt="Bộ sưu tập">
+                    <img src="/images/newbanner2.png" alt="Bộ sưu tập">
                     <div class="caption">
                         <h3>Bộ sưu tập sách Đông Dương 1930–1950</h3>
-                        <p>Hành trình lưu giữ tinh hoa văn học cổ Việt Nam.</p>
+                        <p>Những ấn bản xuất bản ở Đông Dương (1930-1950), lưu giữ giá trị văn hóa & lịch sử.</p>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
         <!-- ===== RIGHT NEWS COLUMN ===== -->
         <section id="news-column" class="news-column">
             <article class="news-card">
-                <img src="book1.jpg" alt="Dostoyevsky">
-                <div class="news-content">
-                    <span class="tag">REVIEW SÁCH</span>
-                    <h4>Tuyệt phẩm của Fyodor Dostoevsky</h4>
-                    <p>Tháng 11, 2024</p>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <img src="workshop.jpg" alt="Workshop phim">
+                <img src="/images/workshop.png" alt="Workshop">
                 <div class="news-content">
                     <span class="tag">TIN TỨC</span>
-                    <h4>Workshop “Thử cảm một cuộn phim”</h4>
-                    <p>Tháng 11, 2024</p>
+                    <h4>Workshop “Đọc sách theo phong cách handmade"</h4>
+                    <p>Tháng 4, 2025</p>
                 </div>
             </article>
-
             <article class="news-card">
-                <img src="activity.jpg" alt="Hoạt động">
+                <img src="/images/wshoptaisinhsach.jpg" alt="Workshop Sách">
                 <div class="news-content">
                     <span class="tag">TIN TỨC</span>
-                    <h4>Một ngày làm nhân viên Libra</h4>
-                    <p>Tháng 11, 2024</p>
+                    <h4>Workshop “Tái sinh sách cũ”</h4>
+                    <p>Tháng 1, 2025</p>
                 </div>
             </article>
-
             <article class="news-card">
-                <img src="school.jpg" alt="Workshop học sinh">
+                <img src="/images/gocnhincaphe.jpg" alt="Góc nhìn Sách">
                 <div class="news-content">
                     <span class="tag">TIN TỨC</span>
-                    <h4>Workshop “Thư gửi em học sinh”</h4>
-                    <p>Tháng 11, 2024</p>
+                    <h4>Góc nhìn “Sách & Cà phê sáng thứ 7”</h4>
+                    <p>Tháng 10, 2024</p>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="/images/phanbietthatgia.webp" alt="Phân Biệt">
+                <div class="news-content">
+                    <span class="tag">TIN TỨC</span>
+                    <h4>Cách nhận biết sách thật và sách giả trong thời đại số</h4>
+                    <p>Tháng 5, 2025</p>
                 </div>
             </article>
         </section>
-
-
         <section class="quote-section" data-aos="fade-up">
             “Mỗi cuốn sách cũ không chỉ là một món hàng, mà là ký ức – của người từng đọc, của thời gian và tri thức.”
         </section>
-
-
-
-
-
-
-
-
-
-
         <!-- ===== Ý NGHĨA CỦA VIỆC SỬ DỤNG SÁCH CŨ ===== -->
         <section id="special-seller" class="special-seller">
             <div class="seller-container">
@@ -182,62 +156,53 @@
         </section>
 
     </main>
-
     <!-- ===== READER VOICES ===== -->
     <section id="reader-voices" class="reader-voices" data-aos="fade-up">
         <h2>ĐỘC GIẢ NÓI GÌ VỀ LIBRA</h2>
-
         <div class="voices">
             <figure class="voice-card">
                 <blockquote>
                     “Tôi tìm được ‘Đi tìm thời gian đã mất’ bản cũ – cảm giác như chạm vào lịch sử, mùi giấy xưa làm
                     mình xúc động.”
                 </blockquote>
-                <figcaption>— Minh Anh, độc giả lâu năm</figcaption>
+                <figcaption>— Minh Anh, độc giả lâu năm -</figcaption>
             </figure>
-
             <figure class="voice-card">
                 <blockquote>
                     “Libra khiến tôi thấy đọc sách không chỉ là học, mà là hành trình đồng cảm cùng người xưa.”
                 </blockquote>
-                <figcaption>— Đức Huy, sinh viên Văn học</figcaption>
+                <figcaption>— Đức Huy, sinh viên Văn học -</figcaption>
             </figure>
-
             <figure class="voice-card">
                 <blockquote>
                     “Định giá rõ ràng, đội ngũ rất hiểu sách. Mua – bán đều yên tâm.”
                 </blockquote>
-                <figcaption>— Bảo Trâm, người sưu tầm</figcaption>
+                <figcaption>— Bảo Trâm, người sưu tầm -</figcaption>
             </figure>
         </div>
     </section>
     <section id="libra-moments" class="libra-moments" data-aos="fade-up">
-
-
         <div class="scroll-container">
             <div class="scroll-track">
-                <img src="/images/banner1.png" alt="Sách Libra" />
-                <img src="/images/banner2.png" alt="Sách Libra" />
-                <img src="/images/banner3.png" alt="Sách Libra" />
-                <img src="/images/banner4.png" alt="Sách Libra" />
-                <img src="/images/banner5.png" alt="Sách Libra" />
-                <img src="/images/banner5.png" alt="Sách Libra" />
-
+                <img src="/images/50cauhoinhansinhquan.jpg" alt="Sách Libra" />
+                <img src="/images/banvesuchamrai.jpg" alt="Sách Libra" />
+                <img src="/images/canhbuomdotham.jpg" alt="Sách Libra" />
+                <img src="/images/chimotgiuamottramngannguoi.jpg" alt="Sách Libra" />
+                <img src="/images/chuchogacsao.jpg" alt="Sách Libra" />
+                <img src="/images/chuyennhati.jpg" alt="Sách Libra" />
                 <!-- Lặp lại 1 lần để cuộn nối mượt -->
-                <img src="/images/banner1.png" alt="Sách Libra" />
-                <img src="/images/banner2.png" alt="Sách Libra" />
-                <img src="/images/banner3.png" alt="Sách Libra" />
-                <img src="/images/banner4.png" alt="Sách Libra" />
-                <img src="/images/banner5.png" alt="Sách Libra" />
+                <img src="/images/chuyenphotieuthuyet.jpg" alt="Sách Libra" />
+                <img src="/images/khachhangthatsucangi.jpg" alt="Sách Libra" />
+                <img src="/images/matmatvohinhnhandienvachualanh.jpg" alt="Sách Libra" />
+                <img src="/images/nuaganhsuytu.jpg" alt="Sách Libra" />
+                <img src="/images/susongsaucaichet.jpg" alt="Sách Libra" />
                 <img src="/images/banner5.png" alt="Sách Libra" />
             </div>
         </div>
     </section>
-
     <!-- ===== SÁCH HIẾM & BÁN CHẠY ===== -->
     <section id="bestseller-2col" class="bestseller-2col">
         <h2>SÁCH HIẾM & BÁN CHẠY</h2>
-
         <div class="book-row">
             <div class="book-large">
                 <div class="book-img">
@@ -253,7 +218,6 @@
                     <button>Thêm vào giỏ hàng</button>
                 </div>
             </div>
-
             <div class="book-large">
                 <div class="book-img">
                     <img src="/images/product_images/di_tim_tg.png" alt="Đi tìm thời gian đã mất - Marcel Proust">
@@ -268,7 +232,6 @@
                 </div>
             </div>
         </div>
-
         <div class="book-row">
             <div class="book-large">
                 <div class="book-img">
@@ -284,7 +247,6 @@
                     <button>Thêm vào giỏ hàng</button>
                 </div>
             </div>
-
             <div class="book-large">
                 <div class="book-img">
                     <img src="/images/product_images/tan_tro_doi.png" alt="Tấn trò đời - Balzac">
@@ -301,62 +263,79 @@
                 </div>
             </div>
         </div>
-
         <a href="#" class="view-all">XEM TẤT CẢ</a>
     </section>
     </main>
-
     <!-- ===== TẠI SAO NÊN MUA – BÁN SÁCH VỚI LIBRA ===== -->
     <section id="why-libra" class="why-libra">
         <div class="overlay"></div>
-
         <h2>TẠI SAO NÊN MUA – BÁN SÁCH VỚI CHÚNG TÔI?</h2>
-
         <div class="why-container">
             <div class="why-item">
                 <i class="icon">📅</i>
                 <h3>10+</h3>
                 <p>"Năm" với lĩnh vực sách cũ</p>
             </div>
-
             <div class="why-item">
                 <i class="icon">⭐</i>
-                <h3>3000+</h3>
+                <h3>1000+</h3>
                 <p>"Quyển sách xưa" đang có mặt</p>
             </div>
-
             <div class="why-item">
                 <i class="icon">❤️️</i>
-                <h3>20+</h3>
+                <h3>10+</h3>
                 <p>"Nhân viên" nhiệt tình, am hiểu</p>
             </div>
-
             <div class="why-item">
                 <i class="icon">📖</i>
-                <h3>30+</h3>
+                <h3>10+</h3>
                 <p>"Tấn sách" mỗi ngày tại cửa hàng</p>
             </div>
-
             <div class="why-item">
                 <i class="icon">🏠</i>
-                <h3>4</h3>
+                <h3>2</h3>
                 <p>"Chi nhánh" có mặt tại TP.HCM</p>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-    <footer>
-        © 2024 Libra – Sách cũ thư viện. All rights reserved.
-    </footer>
-
-
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo + Thông tin -->
+          <div class="footer-info">
+            <img src="/images/Libralogo.png" alt="Libra Logo" class="footer-logo">
+            <div class="footer-text">
+              <h3>LIBRA – BOOK LOVERS</h3>
+              <p><i class="fa fa-map-marker"></i> 669 Đỗ Mười, Khu phố 6, Phường Linh Xuân, TP.Thủ Đức, TP.HCM</p>
+              <p><i class="fa fa-phone"></i> 0909 123 456</p>
+              <p><i class="fa fa-envelope"></i> libra.contact@gmail.com</p>
+              <p><i class="fa fa-globe"></i> <a href="https://librabook.vn" target="_blank">https://librabook.vn</a></p>
+            </div>
+          </div>
+          <!-- Nhận thông tin sách -->
+          <div class="footer-subscribe">
+            <h3>NHẬN BÁO GIÁ SÁCH CẦN BÁN</h3>
+            <p>Chia sẻ những quyển sách cũ để lan tỏa tri thức và tình yêu sách đến mọi người.</p>
+            <div class="subscribe-box">
+              <input type="email" placeholder="libra.contact@gmail.com">
+              <button><i class="fa fa-paper-plane"></i></button>
+            </div>
+          </div>
+          <!-- Mạng xã hội -->
+          <div class="footer-social">
+            <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook-square"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2025 <strong>Libra – Book Lovers</strong>. All rights reserved.</p>
+        </div>
+      </footer>
 </body>
 <script src="/js/script.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </html>

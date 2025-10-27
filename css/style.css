@@ -86,61 +86,47 @@ body {
   width: 100%;
 }
 
-.search-box {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-.search-box input {
-  border: none;
-  padding: 8px 14px;
-  outline: none;
-  font-size: 0.9rem;
-  width: 160px;
-}
-
-.search-box button {
-  border: none;
-  background: var(--gold);
-  padding: 8px 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-/* ===== CART ICON ===== */
+/* ===== NAV ACTIONS (Modern Style) ===== */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 28px;
 }
 
-.cart-icon a {
+.icon-btn {
   position: relative;
-  font-size: 1.8rem;
-  color: #fff8d6; 
-  transition: transform 0.2s ease, color 0.3s ease;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 
-.cart-icon a:hover {
+.icon-btn:hover {
+  color: var(--gold);
   transform: scale(1.1);
-  color: #f8c63d; 
 }
 
-.cart-count {
+.icon-btn.cart .cart-count {
   position: absolute;
-  top: -8px;
+  top: -6px;
   right: -10px;
-  background: #ffcb2b; 
-  color: #1a1a1a;
+  background: #e74c3c;
+  color: #fff;
   font-size: 0.7rem;
   font-weight: 700;
   padding: 2px 6px;
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(255, 230, 130, 0.8);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 }
+
+/* Ẩn tìm kiếm cũ */
+.search-box {
+  display: none !important;
+}
+
+/* Font Awesome Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
 /* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(rgba(11, 96, 65, 0.3), rgba(11, 96, 65, 0.5)), url("/images/bg_banner.jpeg") center/cover no-repeat;
@@ -153,12 +139,10 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 3rem;
   color: var(--gold);
-  /* Dùng color thay cho font-display */
   margin-bottom: 10px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
 }
-
-
 
 .hero p {
   font-size: 1.2rem;
@@ -174,8 +158,7 @@ body {
   padding: 60px;
 }
 
-
-/* FIXED ELEMENTS */
+/* ===== TAGLINE & INDEX ===== */
 .tagline {
   position: fixed;
   left: 18px;
@@ -207,7 +190,7 @@ body {
   text-decoration: none;
   color: rgba(47, 46, 43, .45);
   font-size: .85rem;
-  transition: opacity .25s var(--easing), color .25s var(--easing);
+  transition: opacity .25s, color .25s;
 }
 
 .index a .dot {
@@ -216,11 +199,7 @@ body {
   border-radius: 50%;
   background: rgba(47, 46, 43, .28);
   display: inline-block;
-  transition: transform .25s var(--easing), background .25s var(--easing);
-}
-
-.index a.active {
-  color: var(--navy)
+  transition: transform .25s, background .25s;
 }
 
 .index a.active .dot {
@@ -228,8 +207,7 @@ body {
   background: var(--gold);
 }
 
-/* ===== LEFT BANNER (6 phần) ===== */
-/* KHUNG BANNER: có tỉ lệ ảnh, tự co giãn theo chiều ngang */
+/* ===== BANNER ===== */
 .banner-box {
   flex: 6;
   min-width: 500px;
@@ -237,24 +215,19 @@ body {
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
-  aspect-ratio: 16 / 9;
-  /* hoặc 21/9, 3/1 tuỳ layout */
+  aspect-ratio: 1/1;
   background: #f6f1e6;
-  /* màu nền khi ảnh chưa tải */
 }
 
-/* Slider chiếm toàn bộ khung */
 .slider {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* Mỗi slide phủ kín khung, xếp chồng lên nhau */
 .slide {
   position: absolute;
   inset: 0;
-  /* top/right/bottom/left: 0 */
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -265,16 +238,13 @@ body {
   opacity: 1;
 }
 
-/* Ảnh fill khung mà không méo */
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 16px;
 }
 
-/* Caption tuyệt đối để KHÔNG đẩy chiều cao khung */
 .caption {
   position: absolute;
   left: 24px;
@@ -286,7 +256,6 @@ body {
   border-radius: 12px;
   backdrop-filter: blur(2px);
 }
-
 
 .caption h3 {
   font-size: 1.4rem;
@@ -334,7 +303,7 @@ body {
 }
 
 
-/* ===== NỀN ĐỘNG NHẸ ===== */
+/* ===== NỀN ĐỘNG ===== */
 .bg-shape {
   position: fixed;
   inset: 0;
@@ -444,60 +413,74 @@ body {
   }
 }
 
-/* ===== RIGHT NEWS COLUMN (4 phần) ===== */
+/* ===== RIGHT NEWS COLUMN ===== */
 .news-column {
   flex: 4;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;  
+  grid-auto-rows: 1fr;         
   gap: 22px;
+  align-items: stretch;
 }
-
 .news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  height: 100%; 
 }
-
 .news-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
-
 .news-card img {
   width: 100%;
-  height: 170px;
+  height: 200px;
+  aspect-ratio: 19/6;
   object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
-
 .news-content {
-  padding: 15px 18px;
+  flex: 1;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .news-content .tag {
   display: inline-block;
   background: var(--gold);
   color: #333;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  padding: 4px 10px;       
+  border-radius: 6px;       
+  margin-bottom: 10px;      
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+  width: fit-content;        
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
+
 
 .news-content h4 {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.1rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--text);
+  line-height: 1.3;
 }
 
 .news-content p {
   font-size: 0.9rem;
   color: #666;
+  line-height: 1.4;
+  flex-grow: 1;
 }
-
 /* ===== Animation ===== */
 @keyframes fadeIn {
   from {
@@ -594,14 +577,121 @@ body {
 }
 
 /* ===== FOOTER ===== */
-footer {
-  background: var(--green);
+.footer {
+  color: black ;
+  position: relative;
+  padding: 50px 60px 20px;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--beige);
+  z-index: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-info, .footer-subscribe, .footer-social {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer-text h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #f8c63d;
+}
+
+.footer-text p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.footer-text a {
+  color: #f8c63d;
+  text-decoration: none;
+}
+
+.footer-subscribe h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f8c63d;
+}
+
+.footer-subscribe p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-box input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 75%;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #f8c63d;
+  color: #333;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.subscribe-box button:hover {
+  background: #e5b92f;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  font-size: 24px;
   color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f8c63d;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9rem;
-  letter-spacing: 0.4px;
-  margin-top: 50px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 900px) {
