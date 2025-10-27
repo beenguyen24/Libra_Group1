@@ -1,0 +1,200 @@
+:root {
+    --green: #0b6041;
+    --beige: #f3ede4;
+    --gold: #f8c63d;
+    --text: #2a2a2a;
+  }
+  
+  /* ===== Hero Section ===== */
+  .news-hero {
+    background: linear-gradient(rgba(11, 96, 65, 0.3), rgba(11, 96, 65, 0.5)),
+                url("/images/bg_banner.jpeg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 28px 20px 34px; 
+    border-bottom: 3px solid #f3ede4;
+    min-height: 110px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .news-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: var(--gold); 
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+  }
+  
+  .news-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.7;
+  }
+
+  
+  /* ===== Layout ===== */
+  .news-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px;
+    padding: 60px 80px;
+    background-color: var(--beige);
+  }
+  
+  /* ===== Article Cards ===== */
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 35px;
+  }
+  
+  .news-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+  
+  .news-item img {
+    width: 100%;
+    aspect-ratio: 3 / 2;          
+    object-fit: contain;          
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #f8f8f8;   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .news-item:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  
+  .news-item h2 {
+    font-size: 18px;
+    color: var(--green);
+    margin: 18px 16px 8px;
+  }
+  
+  .news-item .author {
+    font-size: 13px;
+    color: #777;
+    margin: 0 16px;
+  }
+  
+  .news-item .excerpt {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 10px 16px 20px;
+  }
+  
+  /* ===== Sidebar ===== */
+  .news-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    height: fit-content;
+  }
+  
+  .news-sidebar h3 {
+    font-size: 18px;
+    color: var(--green);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .news-sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .news-sidebar li {
+    margin-bottom: 18px;
+  }
+  
+  .news-sidebar a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .news-sidebar a:hover {
+    color: var(--green);
+  }
+  
+  .news-sidebar span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+  }
+  
+  /* ===== Pagination ===== */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 30px 0 60px;
+    background-color: var(--beige);
+  }
+  
+  .page {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--green);
+    border: 1px solid #ccc;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .page:hover {
+    background: var(--green);
+    color: #fff;
+  }
+  
+  .page.active {
+    background: var(--gold);
+    color: #333;
+    font-weight: 600;
+  }
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  
+  /* ===== Footer ===== */
+  .footer {
+    background: var(--green);
+    color: var(--beige);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+  
